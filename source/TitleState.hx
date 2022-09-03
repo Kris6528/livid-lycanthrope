@@ -21,8 +21,7 @@ import flixel.math.FlxRect;
 import flixel.system.FlxSound;
 import flixel.system.ui.FlxSoundTray;
 import flixel.text.FlxText;
-//#if MODS_ALLOWED
-#if desktop
+#if MODS_ALLOWED
 import sys.FileSystem;
 import sys.io.File;
 #end
