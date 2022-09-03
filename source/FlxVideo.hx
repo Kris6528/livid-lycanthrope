@@ -5,7 +5,7 @@ import openfl.events.NetStatusEvent;
 import openfl.media.Video;
 #else
 import openfl.events.Event;
-import vlc.VlcBitmap;
+import vlc.VLCBitmap;
 #end
 import flixel.FlxBasic;
 import flixel.FlxG;
@@ -15,7 +15,7 @@ class FlxVideo extends FlxBasic {
 	public var finishCallback:Void->Void = null;
 	
 	#if desktop
-	public static var vlcBitmap:VlcBitmap;
+	public static var vlcBitmap:VLCBitmap;
 	#end
 
 	public function new(name:String) {
@@ -46,10 +46,10 @@ class FlxVideo extends FlxBasic {
 		});
 		netStream.play(name);
 
-		#elseif desktop
+		#else
 		// by Polybius, check out PolyEngine! https://github.com/polybiusproxy/PolyEngine
 
-		vlcBitmap = new VlcBitmap();
+		vlcBitmap = new VLCBitmap();
 		vlcBitmap.set_height(FlxG.stage.stageHeight);
 		vlcBitmap.set_width(FlxG.stage.stageHeight * (16 / 9));
 
