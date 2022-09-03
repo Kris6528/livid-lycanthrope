@@ -29,6 +29,8 @@ class Main extends Sprite
 
 	public function new()
 	{
+		SUtil.uncaughtErrorHandler();
+		
 		super();
 
 		if (stage != null)
@@ -71,6 +73,9 @@ class Main extends Sprite
 
 		Paths.getModFolders();
 		ClientPrefs.startControls();
+		
+		SUtil.check();
+		
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 
 		#if !mobile
