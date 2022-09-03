@@ -65,7 +65,7 @@ class TitleState extends MusicBeatState
 	override public function create():Void
 	{
 
-		for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/songs")))
+		for (i in FileSystem.readDirectory(SUtil.getPath() + FileSystem.absolutePath("assets/songs")))
 			{
 				music.push(i);
 			}
