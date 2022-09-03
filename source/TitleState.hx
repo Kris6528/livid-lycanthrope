@@ -21,8 +21,10 @@ import flixel.math.FlxRect;
 import flixel.system.FlxSound;
 import flixel.system.ui.FlxSoundTray;
 import flixel.text.FlxText;
+#if MODS_ALLOWED
 import sys.FileSystem;
 import sys.io.File;
+#end
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
