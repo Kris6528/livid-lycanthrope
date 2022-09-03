@@ -1032,8 +1032,8 @@ class PlayState extends MusicBeatState
 					if (alreadyshowed) {
 						FlxTransitionableState.skipNextTransIn = false;
 						FlxTransitionableState.skipNextTransOut = false;
-						var video:VideoHandlerMP4 = new VideoHandlerMP4();
-						video.playMP4(Paths.video('FNF-Lyc cutscene 3'));
+						var video:VideoHandler = new VideoHandler();
+						video.playVideo(Paths.video('FNF-Lyc cutscene 3'));
 						video.finishCallback = function()
 						{
 							LoadingState.loadAndSwitchState(new PlayState());
@@ -1049,8 +1049,8 @@ class PlayState extends MusicBeatState
 					if (alreadyshowed) {
 						FlxTransitionableState.skipNextTransIn = false;
 						FlxTransitionableState.skipNextTransOut = false;
-						var video:VideoHandlerMP4 = new VideoHandlerMP4();
-						video.playMP4(Paths.video('FNF-Lyc cutscene 2'));
+						var video:VideoHandler = new VideoHandler();
+						video.playVideo(Paths.video('FNF-Lyc cutscene 2'));
 						video.finishCallback = function()
 						{
 							LoadingState.loadAndSwitchState(new PlayState());
@@ -1066,8 +1066,8 @@ class PlayState extends MusicBeatState
 					if (alreadyshowed) {
 						FlxTransitionableState.skipNextTransIn = false;
 						FlxTransitionableState.skipNextTransOut = false;
-						var video:VideoHandlerMP4 = new VideoHandlerMP4();
-						video.playMP4(Paths.video('FNF-Lyc cutscene 1'));
+						var video:VideoHandler = new VideoHandler();
+						video.playVideo(Paths.video('FNF-Lyc cutscene 1'));
 						video.finishCallback = function()
 						{
 							LoadingState.loadAndSwitchState(new PlayState());
@@ -3191,8 +3191,8 @@ class PlayState extends MusicBeatState
 						case 'lycanthrope':
 								FlxTransitionableState.skipNextTransIn = false;
 								FlxTransitionableState.skipNextTransOut = false;
-								var video:VideoHandlerMP4 = new VideoHandlerMP4();
-								video.playMP4(Paths.video('FNF-Lyc cutscene 4'));
+								var video:VideoHandler = new VideoHandler();
+								video.playVideo(Paths.video('FNF-Lyc cutscene 4'));
 								video.finishCallback = function()
 								{
 									FlxG.sound.playMusic(Paths.music('freakyMenu'));
