@@ -229,7 +229,7 @@ class FreeplayState extends MusicBeatState
 		add(lowerbarrier);
 
 		var freeplaySprite:FlxSprite = new FlxSprite();
-		freeplaySprite.frames = SUtil.getPath() + Paths.getSparrowAtlas('menus/main/menu_freeplay');
+		freeplaySprite.frames = Paths.getSparrowAtlas('menus/main/menu_freeplay');
 		freeplaySprite.animation.addByPrefix('idle', "freeplay white", 12);
 		freeplaySprite.animation.play('idle');
 		add(freeplaySprite);
