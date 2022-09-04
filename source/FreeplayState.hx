@@ -634,8 +634,8 @@ class FreeplayState extends MusicBeatState
 		}
 		if (!FlxG.save.data.all80)
 			{
-				grpSongs.members[3].alpha = 0;
-				iconArray[3].alpha = 0;
+				//grpSongs.members[3].alpha = 0;
+				//iconArray[3].alpha = 0;
 			}
 		changeDiff();
 		Paths.currentModDirectory = songs[curSelected].folder;
