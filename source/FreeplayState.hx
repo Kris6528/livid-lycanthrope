@@ -36,6 +36,7 @@ class FreeplayState extends MusicBeatState
 	var lerpRating:Float = 0;
 	var intendedScore:Int = 0;
 	var intendedRating:Float = 0;
+	
 
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
@@ -117,26 +118,26 @@ class FreeplayState extends MusicBeatState
 		backgroundArray = new FlxTypedGroup<FlxSprite>();
 		add(backgroundArray);
 		for (i in 1...3) {
-			var bg = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/select_song_bg' + i));
+			var bg = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/select_song_bg' + i));
 			bg.antialiasing = ClientPrefs.globalAntialiasing;
 			bg.setGraphicSize(Std.int(bg.width * 2/3));
 			bg.updateHitbox();
 
 			backgroundArray.add(bg);
 		}
-		var leftdot:FlxSprite = new FlxSprite(0).loadGraphic(Paths.image('menus/freeplay/leftdot'));
+		var leftdot:FlxSprite = new FlxSprite(0).loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/leftdot'));
 		leftdot.scrollFactor.set(0, 0);
 		leftdot.antialiasing = ClientPrefs.globalAntialiasing;
 		leftdot.y += 50;
 		add(leftdot);
 
-		var rightdot:FlxSprite = new FlxSprite(0).loadGraphic(Paths.image('menus/freeplay/rightdot'));
+		var rightdot:FlxSprite = new FlxSprite(0).loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/rightdot'));
 		rightdot.scrollFactor.set(0, 0);
 		rightdot.antialiasing = ClientPrefs.globalAntialiasing;
 		rightdot.y += 50;
 		add(rightdot);
 
-		cover1 = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/firstsongcover'));
+		cover1 = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/firstsongcover'));
 		cover1.antialiasing = ClientPrefs.globalAntialiasing;
 		cover1.screenCenter();
 		cover1.x -= 270;
@@ -144,7 +145,7 @@ class FreeplayState extends MusicBeatState
 		cover1.setGraphicSize(Std.int(cover1.width * 2/3 + 0.25));
 		add(cover1);
 
-		cover2 = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/secondsongcover'));
+		cover2 = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/secondsongcover'));
 		cover2.antialiasing = ClientPrefs.globalAntialiasing;
 		cover2.screenCenter();
 		cover2.x -= 270;
@@ -152,7 +153,7 @@ class FreeplayState extends MusicBeatState
 		cover2.setGraphicSize(Std.int(cover2.width * 2/3 + 0.25));
 		add(cover2);
 
-		cover3 = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/thirdsongcover'));
+		cover3 = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/thirdsongcover'));
 		cover3.antialiasing = ClientPrefs.globalAntialiasing;
 		cover3.screenCenter();
 		cover3.x -= 270;
@@ -160,7 +161,7 @@ class FreeplayState extends MusicBeatState
 		cover3.setGraphicSize(Std.int(cover3.width * 2/3 + 0.25));
 		add(cover3);
 
-		cover4 = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/varcolaccover'));
+		cover4 = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/varcolaccover'));
 		cover4.antialiasing = ClientPrefs.globalAntialiasing;
 		cover4.screenCenter();
 		cover4.x -= 270;
@@ -168,7 +169,7 @@ class FreeplayState extends MusicBeatState
 		cover4.setGraphicSize(Std.int(cover4.width * 2/3 + 0.25));
 		add(cover4);
 
-		coverlock = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/lockedcover'));
+		coverlock = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/lockedcover'));
 		coverlock.antialiasing = ClientPrefs.globalAntialiasing;
 		coverlock.screenCenter();
 		coverlock.x -= 270;
@@ -184,13 +185,13 @@ class FreeplayState extends MusicBeatState
 
 		for (i in 0...3)
 			{
-					var lock = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/lock1'));
+					var lock = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/lock1'));
 					lock.antialiasing = ClientPrefs.globalAntialiasing;
 					lock.scale.set(0.75,0.75);
 					lockarray.add(lock);
 			}
 
-		locka = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/lock3'));
+		locka = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/lock3'));
 		locka.antialiasing = ClientPrefs.globalAntialiasing;
 		locka.scale.set(0.75,0.75);
 		add(locka);
@@ -217,18 +218,18 @@ class FreeplayState extends MusicBeatState
 			// songText.screenCenter(X);
 		}
 
-		var upperbarrier:FlxSprite = new FlxSprite(0).loadGraphic(Paths.image('menus/main/upperbarrier'));
+		var upperbarrier:FlxSprite = new FlxSprite(0).loadGraphic(SUtil.getPath() + Paths.image('menus/main/upperbarrier'));
 		upperbarrier.scrollFactor.set(0, 0);
 		upperbarrier.antialiasing = ClientPrefs.globalAntialiasing;
 		add(upperbarrier);
 
-		var lowerbarrier:FlxSprite = new FlxSprite(0).loadGraphic(Paths.image('menus/main/lowerbarrier'));
+		var lowerbarrier:FlxSprite = new FlxSprite(0).loadGraphic(SUtil.getPath() + Paths.image('menus/main/lowerbarrier'));
 		lowerbarrier.scrollFactor.set(0, 0);
 		lowerbarrier.antialiasing = ClientPrefs.globalAntialiasing;
 		add(lowerbarrier);
 
 		var freeplaySprite:FlxSprite = new FlxSprite();
-		freeplaySprite.frames = Paths.getSparrowAtlas('menus/main/menu_freeplay');
+		freeplaySprite.frames = SUtil.getPath() + Paths.getSparrowAtlas('menus/main/menu_freeplay');
 		freeplaySprite.animation.addByPrefix('idle', "freeplay white", 12);
 		freeplaySprite.animation.play('idle');
 		add(freeplaySprite);
@@ -303,7 +304,7 @@ class FreeplayState extends MusicBeatState
 		cover4.alpha = 0;
 		coverlock.alpha = 0;
 
-		var bs:FlxSprite = new FlxSprite(-70,540).loadGraphic(Paths.image('menus/freeplay/best_score'));
+		var bs:FlxSprite = new FlxSprite(-70,540).loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/best_score'));
 		bs.scrollFactor.set(0, 0);
 		bs.antialiasing = ClientPrefs.globalAntialiasing;
 		bs.scale.set(0.6,0.6);
@@ -313,25 +314,25 @@ class FreeplayState extends MusicBeatState
 		difftext.diff2 = true;
 		add(difftext);
 
-		expert = new FlxSprite(-448,35).loadGraphic(Paths.image('menus/story/exp'));
+		expert = new FlxSprite(-448,35).loadGraphic(SUtil.getPath() + Paths.image('menus/story/exp'));
 		expert.scrollFactor.set(0, 0);
 		expert.scale.set(0.16,0.16);
 		expert.antialiasing = ClientPrefs.globalAntialiasing;
 		add(expert);
 
-		normal = new FlxSprite(-850,35).loadGraphic(Paths.image('menus/story/nrm'));
+		normal = new FlxSprite(-850,35).loadGraphic(SUtil.getPath + Paths.image('menus/story/nrm'));
 		normal.scrollFactor.set(0, 0);
 		normal.scale.set(0.12,0.12);
 		normal.antialiasing = ClientPrefs.globalAntialiasing;
 		add(normal);
 
-		leftArrow = new FlxSprite(1163).loadGraphic(Paths.image('credits/leftbutton'));
+		leftArrow = new FlxSprite(1163).loadGraphic(SUtil.getPath() + Paths.image('credits/leftbutton'));
 		leftArrow.updateHitbox();
 		leftArrow.antialiasing = true;
 		leftArrow.angle += 90;
 		add(leftArrow);
 
-		rightArrow = new FlxSprite(1163).loadGraphic(Paths.image('credits/rightbutton'));
+		rightArrow = new FlxSprite(1163).loadGraphic(SUtil.getPath() + Paths.image('credits/rightbutton'));
 		rightArrow.updateHitbox();
 		rightArrow.antialiasing = true;
 		rightArrow.angle += 90;
@@ -341,13 +342,13 @@ class FreeplayState extends MusicBeatState
 		rightArrow.y += 150;
 		leftArrow.y-= 150;
 
-		fc = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/silver'));
+		fc = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/silver'));
 		fc.antialiasing = true;
 		fc.screenCenter();
 		fc.alpha = 0;
 		add(fc);
 
-		fcexp = new FlxSprite().loadGraphic(Paths.image('menus/freeplay/gold'));
+		fcexp = new FlxSprite().loadGraphic(SUtil.getPath() + Paths.image('menus/freeplay/gold'));
 		fcexp.antialiasing = true;
 		fcexp.screenCenter();
 		fcexp.alpha = 0;
