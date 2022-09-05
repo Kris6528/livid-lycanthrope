@@ -173,7 +173,7 @@ class CreditsState extends MusicBeatState
 
 
 
-		for (i in 12...23) 
+		for (i in 12...24) 
 		{
 			credits.members[i].x += 1280;
 		}
