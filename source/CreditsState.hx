@@ -181,7 +181,7 @@ class CreditsState extends MusicBeatState
 		{
 			credits.members[i].x += 1280;
 		}
-		credits.members[24].x += 1280;
+		//credits.members[24].x += 1280;
 
 		new FlxTimer().start(0.6, function(tmr:FlxTimer)
 			{
