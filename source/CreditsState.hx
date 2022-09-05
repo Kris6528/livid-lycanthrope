@@ -141,6 +141,8 @@ class CreditsState extends MusicBeatState
 					iconthingy = new Credit(815, 138, 'specialthanks', '',1,1);
 					iconthingy.screenCenter();
 					iconthingy.x += 1280 * 2;
+				case 24:
+					iconthingy = new Credit(80, 138, 'Sirox', '', 0.7, 0.7);
 			}
 			iconthingy.antialiasing = true;
 			credits.add(iconthingy);
@@ -179,6 +181,8 @@ class CreditsState extends MusicBeatState
 		{
 			credits.members[i].x += 1280;
 		}
+		
+		credits.members24.x += 1280;
 
 		new FlxTimer().start(0.6, function(tmr:FlxTimer)
 			{
@@ -250,7 +254,7 @@ class CreditsState extends MusicBeatState
 						}
 						if (FlxG.mouse.overlaps(rightArrow))
 						{
-							if (curSelected != 2)
+							if (curSelected != 3)
 								{
 									canmove =false;
 									changeSelection(1);
@@ -300,7 +304,7 @@ class CreditsState extends MusicBeatState
 		
 					if (controls.UI_RIGHT_P)
 					{
-						if (curSelected != 2)
+						if (curSelected != 3)
 							{
 								canmove =false;
 								changeSelection(1);
@@ -320,8 +324,8 @@ class CreditsState extends MusicBeatState
 
 		curSelected += change;
 
-		if (curSelected == 3)
-			curSelected = 2;
+		if (curSelected == 4)
+			curSelected = 3;
 		if (curSelected == -1)
 			curSelected = 0;
 
